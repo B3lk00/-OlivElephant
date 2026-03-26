@@ -707,3 +707,42 @@ section:hover {
   }
 
 }
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #11151b;
+
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 15px 0;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #2b313a;
+  }
+
+  nav.show {
+    display: flex;
+  }
+}
