@@ -586,3 +586,124 @@ section:hover {
     background: url('https://images.unsplash.com/photo-1511884642898-4c92249e20b6?auto=format&fit=crop&w=1400&q=80') center/cover;
   }
 }
+
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  main {
+    padding: 20px 12px;
+  }
+
+  section {
+    padding: 18px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p, li {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 280px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dugme {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  nav a {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .pricing-grid,
+  .contact-grid,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card,
+  .contact-card,
+  .info-box {
+    padding: 18px;
+  }
+
+  .price {
+    font-size: 22px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .real-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    min-height: 180px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  html {
+    zoom: 0.95;
+  }
+
+}
