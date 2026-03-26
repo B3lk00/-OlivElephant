@@ -9,78 +9,123 @@
 <body>
 
   <header>
-    <h1>OlivElephant</h1>
-    <nav>
-      <a href="index.html">Početna</a>
-      <a href="o-nama.html">O nama</a>
-      <a href="cjenovnik.html"class="active">Cjenovnik</a>
-      <a href="oprema.html">Oprema</a>
-      <a href="galerija.html">Galerija</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
+    <div class="header-container">
+      <div class="logo">OlivElephant</div>
+      <nav>
+        <a href="index.html">Početna</a>
+        <a href="o-nama.html">O nama</a>
+        <a href="cjenovnik.html" class="active">Cjenovnik</a>
+        <a href="oprema.html">Oprema</a>
+        <a href="galerija.html">Galerija</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
   </header>
 
   <main>
+    <section class="page-hero">
+      <h2>Cjenovnik</h2>
+      <p>
+        Pregled članarina, cijena municije i uslova korištenja strelišta za članove i nečlanove.
+      </p>
+    </section>
+
     <section>
       <h2>Članarine</h2>
-      <table>
-        <tr>
-          <th>Paket</th>
-          <th>Cijena</th>
-          <th>Opis</th>
-        </tr>
-        <tr>
-          <td>Standardno</td>
-          <td>120 KM godišnje</td>
-          <td>Trening jednom sedmično nedjeljom</td>
-        </tr>
-        <tr>
-          <td>Plus</td>
-          <td>360 KM godišnje</td>
-          <td>Trening petkom, subotom i nedjeljom</td>
-        </tr>
-        <tr>
-          <td>Premium</td>
-          <td>600 KM godišnje</td>
-          <td>Trening od srijede do nedjelje</td>
-        </tr>
-        <tr>
-          <td>Doživotno</td>
-          <td>3000 KM jednokratno</td>
-          <td>Trajno članstvo bez godišnje članarine</td>
-        </tr>
-      </table>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Standardno</h3>
+          <p class="price">120 KM <span>/ godišnje</span></p>
+          <ul>
+            <li>Trening jednom sedmično</li>
+            <li>Nedjeljom</li>
+            <li>Ulaz u klub po osnovnom paketu</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Plus</h3>
+          <p class="price">360 KM <span>/ godišnje</span></p>
+          <ul>
+            <li>Trening petkom, subotom i nedjeljom</li>
+            <li>Češći dolasci i više termina</li>
+            <li>Pogodno za aktivnije članove</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card featured-card">
+          <div class="badge">Preporučeno</div>
+          <h3>Premium</h3>
+          <p class="price">600 KM <span>/ godišnje</span></p>
+          <ul>
+            <li>Trening od srijede do nedjelje</li>
+            <li>Najviše termina u toku sedmice</li>
+            <li>Za ozbiljniji i redovniji trening</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Doživotno</h3>
+          <p class="price">3000 KM <span>/ jednokratno</span></p>
+          <ul>
+            <li>Trajno članstvo</li>
+            <li>Bez godišnje članarine</li>
+            <li>Dugoročno najpovoljnija opcija</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="napomena">
+        Članovi kluba mogu besplatno koristiti naše posuđeno vatreno oružje tokom treninga.
+      </p>
     </section>
 
     <section>
       <h2>Cijene municije</h2>
-      <table>
-        <tr>
-          <th>Vrsta</th>
-          <th>Cijena</th>
-          <th>Napomena</th>
-        </tr>
-        <tr>
-          <td>9 mm</td>
-          <td>0,80 KM po metku</td>
-          <td>Minimalna kupovina 50 metaka = 40 KM</td>
-        </tr>
-        <tr>
-          <td>.223</td>
-          <td>1,50 KM po metku</td>
-          <td>Prodaja samo za upotrebu na strelištu</td>
-        </tr>
-      </table>
+      <div class="pricing-grid ammo-grid">
+        <div class="pricing-card">
+          <h3>9 mm</h3>
+          <p class="price">0,80 KM <span>/ po metku</span></p>
+          <ul>
+            <li>Minimalna kupovina: 50 metaka</li>
+            <li>Ukupno: 40 KM</li>
+            <li>Samo za upotrebu na strelištu</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card">
+          <h3>.223</h3>
+          <p class="price">1,50 KM <span>/ po metku</span></p>
+          <ul>
+            <li>Prodaja za neposrednu upotrebu</li>
+            <li>Korištenje isključivo na strelištu</li>
+            <li>Prema pravilima kluba</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section>
       <h2>Nečlanovi</h2>
-      <p>Cijena za nečlanove: <strong>20 KM po posjeti</strong></p>
+      <div class="single-price-box">
+        <h3>Posjeta za nečlanove</h3>
+        <p class="price">20 KM <span>/ po posjeti</span></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Važne napomene</h2>
+      <ul>
+        <li>Municija se prodaje samo za neposrednu upotrebu na strelištu.</li>
+        <li>Alkohol i droge su strogo zabranjeni na našem strelištu.</li>
+        <li>Osobe pod utjecajem alkohola ili droga bit će poslane kući.</li>
+        <li>Za članstvo je potrebna minimalna starost od 21 godinu i čist kriminalni dosije.</li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 OlivElephant</p>
+    <p>&copy; 2026 OlivElephant. Sva prava zadržana.</p>
   </footer>
 
 </body>
