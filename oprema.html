@@ -5,84 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OlivElephant | Oprema</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
 
-  <header>
+<header>
   <div class="header-container">
-  <div class="logo">
-  <img src="images/logo.png" alt="OlivElephant logo">
-  <span>OlivElephant</span>
-  </div>
+    <div class="logo">
+      <img src="images/logo.png" alt="logo">
+      <span>OlivElephant</span>
+    </div>
 
-<button class="menu-toggle" id="menu-toggle" aria-label="Otvori meni">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-    
+    <button id="menu-toggle">☰</button>
+
     <nav id="nav-menu">
       <a href="index.html">Početna</a>
       <a href="o-nama.html">O nama</a>
       <a href="cjenovnik.html">Cjenovnik</a>
-      <a href="oprema.html"class="active">Oprema</a>
+      <a href="oprema.html" class="active">Oprema</a>
       <a href="galerija.html">Galerija</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section>
-      <h2>Oprema i korištenje oružja</h2>
-      <p>
-        Članovi našeg kluba mogu besplatno koristiti naše posuđeno vatreno oružje tokom treninga.
-      </p>
-      <p>
-        Municija se prodaje isključivo za neposrednu upotrebu na strelištu.
-      </p>
-    </section>
+<main>
 
-    <section>
-      <h2>Dostupne kategorije</h2>
-      <ul>
-        <li>Vatreno oružje za trening članova</li>
-        <li>Pištoljska municija 9 mm</li>
-        <li>Municija .223</li>
-      </ul>
-    </section>
+  <section class="page-hero">
+    <h2>Oprema</h2>
+    <p>Pregled opreme i oružja dostupnog na strelištu OlivElephant.</p>
+  </section>
 
-    <section>
-      <h2>Napomena</h2>
-      <p>
-        Ako kasnije dobiješ tačne modele oružja, ovdje možemo dodati posebnu listu,
-        slike i kratke opise za svaki komad opreme.
-      </p>
-    </section>
-  </main>
+  <!-- ZAŠTITNA OPREMA -->
+  <section>
+    <h2>Zaštitna oprema</h2>
 
-  <footer>
-    <p>&copy; 2026 OlivElephant</p>
-  </footer>
+    <div class="oprema-grid">
 
-  <script>
+      <div class="oprema-card">
+        <img src="images/antifon.jpg" alt="Antifon slušalice">
+        <h3>Antifon slušalice</h3>
+        <p>Zaštita sluha tokom pucanja. Obavezna oprema na strelištu.</p>
+      </div>
+
+      <div class="oprema-card">
+        <img src="images/naocale.jpg" alt="Zaštitne naočale">
+        <h3>Zaštitne naočale</h3>
+        <p>Štite oči od čaura i mogućih povreda tokom gađanja.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PIŠTOLJI -->
+  <section>
+    <h2>Pištolji</h2>
+
+    <div class="oprema-grid">
+
+      <div class="oprema-card">
+        <img src="images/pistolj1.jpg" alt="Pištolj">
+        <h3>Poluautomatski pištolj</h3>
+        <p>Standardni pištolji za sportsko i rekreativno gađanje.</p>
+      </div>
+
+      <div class="oprema-card">
+        <img src="images/pistolj2.jpg" alt="Pištolj">
+        <h3>Trening modeli</h3>
+        <p>Idealni za početnike i usavršavanje tehnike.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PUŠKE -->
+  <section>
+    <h2>Puške</h2>
+
+    <div class="oprema-grid">
+
+      <div class="oprema-card">
+        <img src="images/puska1.jpg" alt="Puška">
+        <h3>.223 puške</h3>
+        <p>Za precizno gađanje na većim distancama.</p>
+      </div>
+
+      <div class="oprema-card">
+        <img src="images/puska2.jpg" alt="Puška">
+        <h3>Sportske puške</h3>
+        <p>Namijenjene za trening i takmičarsko gađanje.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Napomena</h2>
+    <p>
+      Sva oprema se koristi uz nadzor i prema pravilima sigurnosti.
+      Članovi mogu koristiti posuđeno oružje tokom treninga.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 OlivElephant</p>
+</footer>
+
+<script>
   const toggle = document.getElementById("menu-toggle");
   const menu = document.getElementById("nav-menu");
-  const links = document.querySelectorAll("#nav-menu a");
 
-  if (toggle && menu) {
-    toggle.addEventListener("click", function () {
-      menu.classList.toggle("show");
-      toggle.classList.toggle("active");
-    });
-
-    links.forEach(function (link) {
-      link.addEventListener("click", function () {
-        menu.classList.remove("show");
-        toggle.classList.remove("active");
-      });
-    });
-  }
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
 </script>
 
 </body>
