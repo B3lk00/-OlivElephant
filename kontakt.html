@@ -9,41 +9,96 @@
 <body>
 
   <header>
-    <h1>OlivElephant</h1>
-    <nav>
-      <a href="index.html">Početna</a>
-      <a href="o-nama.html">O nama</a>
-      <a href="cjenovnik.html">Cjenovnik</a>
-      <a href="oprema.html">Oprema</a>
-      <a href="galerija.html">Galerija</a>
-      <a href="kontakt.html"class="active">Kontakt</a>
-    </nav>
+    <div class="header-container">
+      <div class="logo">OlivElephant</div>
+      <nav>
+        <a href="index.html">Početna</a>
+        <a href="o-nama.html">O nama</a>
+        <a href="cjenovnik.html">Cjenovnik</a>
+        <a href="oprema.html">Oprema</a>
+        <a href="galerija.html">Galerija</a>
+        <a href="kontakt.html" class="active">Kontakt</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section>
+    <section class="page-hero">
       <h2>Kontakt</h2>
-      <p>Podatke ispod možeš naknadno zamijeniti stvarnim informacijama.</p>
+      <p>
+        Za dodatne informacije o članstvu, terminima treninga i pravilima kluba,
+        kontaktirajte nas putem telefona, emaila ili društvenih mreža.
+      </p>
     </section>
 
     <section>
       <h2>Kontakt informacije</h2>
-      <p><strong>Telefon:</strong> +387 61 000 000</p>
-      <p><strong>Email:</strong> info@olivelephant.ba</p>
-      <p><strong>Adresa:</strong> Sarajevo, Bosna i Hercegovina</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Adresa</h3>
+          <p>Kruhari bb</p>
+          <p>Sanski Most, Bosnia and Herzegovina, 79260</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Telefon</h3>
+          <p>
+            <a href="tel:+38761759795">061 759 795</a>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p>
+            <a href="mailto:kontakt@olivelephant.com">kontakt@olivelephant.com</a>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Društvene mreže</h3>
+          <p>
+            <a href="https://www.facebook.com/profile.php?id=61582749247260" target="_blank">
+              Facebook stranica
+            </a>
+          </p>
+          <p>
+            <a href="https://www.instagram.com/olivelephant_sanskimost/?utm_source=ig_web_button_share_sheet" target="_blank">
+              Instagram profil
+            </a>
+          </p>
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2>Radno vrijeme</h2>
+      <h2>Lokacija</h2>
+      <p class="map-text">
+        Naša lokacija u Sanskom Mostu:
+      </p>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=Kruhari%20bb,%20Sanski%20Most,%20Bosnia%20and%20Herzegovina,%2079260&output=embed"
+          width="100%"
+          height="350"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <section>
+      <h2>Napomena</h2>
       <p>
-        Treninzi i dolasci zavise od vrste članarine. Detaljne informacije se nalaze
-        na stranici cjenovnika.
+        Prije dolaska preporučujemo da nas kontaktirate kako biste dobili tačne informacije
+        o terminima treninga, uslovima članstva i raspoloživosti strelišta.
       </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 OlivElephant</p>
+    <p>&copy; 2026 OlivElephant. Sva prava zadržana.</p>
   </footer>
 
 </body>
