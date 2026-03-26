@@ -402,3 +402,147 @@ footer {
   width: auto;
   display: block;
 }
+
+
+/* HERO WOW */
+.hero {
+  position: relative;
+  min-height: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 40px;
+
+  background: url('https://images.unsplash.com/photo-1511884642898-4c92249e20b6?auto=format&fit=crop&w=1400&q=80') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 12, 16, 0.6),
+    rgba(10, 12, 16, 0.9)
+  );
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  animation: slideUp 0.8s ease forwards;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #d8dde3;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Dugme varijacije */
+.dugme.secondary {
+  background: transparent;
+  border: 2px solid #c62828;
+}
+
+.dugme.secondary:hover {
+  background: #c62828;
+}
+
+/* Animacije */
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.info-box {
+  transition: 0.2s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  border-color: #c62828;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 350px;
+    padding: 20px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .dugme {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
