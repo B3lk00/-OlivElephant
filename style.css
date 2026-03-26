@@ -870,3 +870,39 @@ section:hover {
 }
 
 
+.oprema-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.oprema-card {
+  background: #11151b;
+  border: 1px solid #2b313a;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.oprema-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(198, 40, 40, 0.3);
+}
+
+.oprema-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.oprema-card h3 {
+  margin: 10px 0 5px;
+  color: #e53935;
+}
+
+.oprema-card p {
+  font-size: 14px;
+  padding: 0 10px 15px;
+}
