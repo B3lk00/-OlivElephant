@@ -11,9 +11,29 @@
 
   <div id="loader">
   <div class="loader-content">
-    <div class="loader-circle"></div>
+
+    <div class="crosshair"></div>
+
     <h2>OlivElephant</h2>
-    <p>Učitavanje...</p>
+    <p class="loader-text">INITIALIZING SYSTEM...</p>
+
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
+
+  </div>
+</div><div id="loader">
+  <div class="loader-content">
+
+    <div class="crosshair"></div>
+
+    <h2>OlivElephant</h2>
+    <p class="loader-text">INITIALIZING SYSTEM...</p>
+
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
+
   </div>
 </div>
 
@@ -136,7 +156,7 @@
 
     setTimeout(() => {
       loader.classList.add("hidden");
-    }, 800); // trajanje loadinga (možeš promijeniti)
+    }, 2200); // trajanje animacije
   });
 </script>
 
