@@ -1026,6 +1026,7 @@ section:hover {
 
 
 
+
 #loader {
   position: fixed;
   inset: 0;
@@ -1043,14 +1044,24 @@ section:hover {
 }
 
 .loader-content {
+  position: relative;
   text-align: center;
 }
 
 /* LOGO */
+.logo-wrapper {
+  margin-bottom: 30px;
+}
+
 .loader-logo {
   width: 90px;
-  margin-bottom: 20px;
-  animation: fadeIn 1s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* "raspadanje" efekat */
+.loader-logo.hit {
+  transform: scale(1.8) rotate(10deg);
+  opacity: 0;
 }
 
 /* TEXT */
@@ -1058,76 +1069,38 @@ section:hover {
   color: #e53935;
   font-size: 14px;
   letter-spacing: 2px;
-  margin-bottom: 25px;
   animation: blink 1.2s infinite;
 }
 
-/* ANIMATION AREA */
-.animation-area {
-  position: relative;
-  width: 300px;
-  height: 60px;
-  margin: auto;
-}
-
-/* GUN (simple bar) */
+/* GUN */
 .gun {
   position: absolute;
-  left: 0;
-  top: 50%;
-  width: 40px;
-  height: 8px;
+  left: -60px;
+  top: 40%;
+  width: 50px;
+  height: 10px;
   background: #888;
-  transform: translateY(-50%);
-  border-radius: 2px;
-}
-
-/* TARGET */
-.target {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 40px;
-  height: 40px;
-  border: 3px solid #e53935;
-  border-radius: 50%;
-  transform: translateY(-50%);
+  border-radius: 3px;
 }
 
 /* BULLET */
 .bullet {
   position: absolute;
-  top: 50%;
-  left: 40px;
-  width: 12px;
-  height: 4px;
+  top: 40%;
+  left: -10px;
+  width: 14px;
+  height: 5px;
   background: #e53935;
+  border-radius: 2px;
   transform: translateY(-50%);
-  animation: shoot 1s linear forwards;
-}
-
-/* IMPACT EFFECT */
-.target::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: transparent;
-  animation: hit 0.5s ease forwards;
-  animation-delay: 1s;
+  animation: shoot 0.8s linear forwards;
 }
 
 /* ANIMATIONS */
 
 @keyframes shoot {
-  from { left: 40px; }
-  to { left: 260px; }
-}
-
-@keyframes hit {
-  0% { background: transparent; transform: scale(1); }
-  50% { background: rgba(229, 57, 53, 0.5); transform: scale(1.3); }
-  100% { background: transparent; transform: scale(1); }
+  from { left: -10px; }
+  to { left: 140px; } /* pogodi logo */
 }
 
 @keyframes blink {
