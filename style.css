@@ -1338,31 +1338,48 @@ section:hover {
 
 
 
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-
-  background: url("images/logo.png") center no-repeat;
-  background-size: 350px;
-
-  opacity: 0.04;
-  filter: grayscale(100%) blur(3px);
-
-  z-index: -1;
-}
-
+body::before,
 body::after {
   content: "";
   position: fixed;
-  inset: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
 
-  background: radial-gradient(
-    circle at center,
-    transparent 40%,
-    #0b0d11 90%
-  );
+  background: url("images/logo.png") no-repeat center;
+  background-size: 250px;
+
+  opacity: 0.03;
+  filter: grayscale(100%) blur(2px);
 
   z-index: -1;
+  pointer-events: none;
+}
+
+/* lijevi logo */
+body::before {
+  left: 0;
+}
+
+/* desni logo */
+body::after {
+  right: 0;
+}
+
+
+@media (max-width: 768px) {
+  body::before,
+  body::after {
+    transform: none;
+    opacity: 0.02;
+  }
+}
+
+
+
+
+body::before,
+body::after {
+  transform: translate(var(--moveX, 0), var(--moveY, 0));
+  transition: transform 0.2s ease;
 }
