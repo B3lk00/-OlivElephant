@@ -1082,6 +1082,7 @@ section:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 12px;
+  margin-bottom: 40px;
 }
 
 .gallery-item {
@@ -1162,12 +1163,3 @@ section:hover {
 
 
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-}
