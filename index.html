@@ -11,16 +11,9 @@
 
 <div id="loader">
   <div class="loader-content">
-
-    <div class="logo-wrapper">
-      <img src="images/logo.png" class="loader-logo" id="logo">
-    </div>
-
-    <div class="gun"></div>
-    <div class="bullet" id="bullet"></div>
-
-    <p class="loader-text">TARGET LOCKED...</p>
-
+    <div class="loader-circle"></div>
+    <h2>OlivElephant</h2>
+    <p>Učitavanje...</p>
   </div>
 </div>
 
@@ -141,20 +134,11 @@
 
 <script>
   window.addEventListener("load", function () {
-
     const loader = document.getElementById("loader");
-    const logo = document.getElementById("logo");
 
-    // kad metak "pogodi"
-    setTimeout(() => {
-      logo.classList.add("hit");
-    }, 800);
-
-    // nestanak loadera
     setTimeout(() => {
       loader.classList.add("hidden");
-    }, 1500);
-
+    }, 800); // trajanje loadinga (možeš promijeniti)
   });
 </script>
   
