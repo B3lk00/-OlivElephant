@@ -1026,22 +1026,15 @@ section:hover {
 
 
 
-/* LOADER - TACTICAL */
-
+/* LOADER BASE */
 #loader {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at center, #0f1115, #000);
+  background: radial-gradient(circle, #0f1115, #000);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
-}
-
-#loader.hidden {
-  opacity: 0;
-  visibility: hidden;
 }
 
 .loader-content {
@@ -1049,46 +1042,54 @@ section:hover {
   color: #e53935;
 }
 
-/* CROSSHAIR */
-.crosshair {
+/* LOGO */
+.loader-logo {
   width: 80px;
-  height: 80px;
-  border: 2px solid #e53935;
-  border-radius: 50%;
-  position: relative;
-  margin: 0 auto 25px;
-  animation: pulse 1.5s infinite;
-}
-
-.crosshair::before,
-.crosshair::after {
-  content: "";
-  position: absolute;
-  background: #e53935;
-}
-
-.crosshair::before {
-  width: 2px;
-  height: 100%;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-}
-
-.crosshair::after {
-  height: 2px;
-  width: 100%;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  margin-bottom: 15px;
+  animation: fadeIn 1s ease;
 }
 
 /* TEXT */
 .loader-text {
   font-size: 14px;
   letter-spacing: 2px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   animation: blink 1.2s infinite;
+}
+
+/* ANIMATION AREA */
+.animation-area {
+  position: relative;
+  width: 250px;
+  height: 50px;
+  margin: 0 auto 20px;
+}
+
+/* GUN */
+.gun {
+  position: absolute;
+  left: 0;
+  font-size: 24px;
+}
+
+/* TARGET */
+.target {
+  position: absolute;
+  right: 0;
+  font-size: 26px;
+}
+
+/* BULLET */
+.bullet {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  width: 10px;
+  height: 4px;
+  background: #e53935;
+  border-radius: 2px;
+  transform: translateY(-50%);
+  animation: shoot 1s linear infinite;
 }
 
 /* BAR */
@@ -1105,22 +1106,22 @@ section:hover {
   height: 100%;
   width: 0%;
   background: #e53935;
-  animation: loadBar 2s ease forwards;
+  animation: loadBar 2.5s ease forwards;
 }
 
 /* ANIMATIONS */
+@keyframes shoot {
+  0% { left: 30px; opacity: 1; }
+  80% { left: 200px; opacity: 1; }
+  100% { left: 210px; opacity: 0; }
+}
+
 @keyframes loadBar {
   from { width: 0%; }
   to { width: 100%; }
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.6; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
 @keyframes blink {
-  0%, 100% { opacity: 1; }
+  0%,100% { opacity: 1; }
   50% { opacity: 0.4; }
 }
