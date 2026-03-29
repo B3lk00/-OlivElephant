@@ -1164,3 +1164,69 @@ section:hover {
 
 
 
+
+/* QUICK INFO */
+.quick-info {
+  margin-top: 30px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.info-box {
+  background: rgba(20, 24, 30, 0.7);
+  border: 1px solid #2b313a;
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s;
+  backdrop-filter: blur(8px);
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  border-color: #e53935;
+  box-shadow: 0 0 15px rgba(229, 57, 53, 0.3);
+}
+
+.info-box h3 {
+  margin-bottom: 10px;
+  color: #e53935;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #11151b, #0d0f13);
+  border-radius: 12px;
+  border: 1px solid #2b313a;
+}
+
+.cta h2 {
+  margin-bottom: 10px;
+}
+
+.cta p {
+  margin-bottom: 20px;
+  color: #c7ccd2;
+}
+
+
+.hero-content {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
