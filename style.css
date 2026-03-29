@@ -1336,3 +1336,33 @@ section:hover {
 }
 
 
+
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: url("images/logo.png") center no-repeat;
+  background-size: 350px;
+
+  opacity: 0.04;
+  filter: grayscale(100%) blur(3px);
+
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at center,
+    transparent 40%,
+    #0b0d11 90%
+  );
+
+  z-index: -1;
+}
