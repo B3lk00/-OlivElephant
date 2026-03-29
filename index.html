@@ -14,16 +14,12 @@
 
     <img src="images/logo.png" class="loader-logo" alt="logo">
 
-    <p class="loader-text">INITIALIZING RANGE...</p>
+    <p class="loader-text">TARGET ACQUIRED...</p>
 
     <div class="animation-area">
-      <div class="gun">🔫</div>
+      <div class="gun"></div>
       <div class="bullet"></div>
-      <div class="target">🎯</div>
-    </div>
-
-    <div class="loader-bar">
-      <div class="loader-progress"></div>
+      <div class="target"></div>
     </div>
 
   </div>
@@ -142,14 +138,13 @@
   }
 </script>
 
- <script>
+<script>
   window.addEventListener("load", function () {
     const loader = document.getElementById("loader");
 
     setTimeout(() => {
-      loader.style.opacity = "0";
-      loader.style.visibility = "hidden";
-    }, 2000);
+      loader.classList.add("hidden");
+    }, 1800); // taman nakon "pogotka"
   });
 </script>
 
