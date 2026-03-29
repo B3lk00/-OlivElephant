@@ -1356,17 +1356,41 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
+
   background: radial-gradient(
-    circle at 50% 20%,
+    circle at 20% 30%,
     rgba(229, 57, 53, 0.15),
-    transparent 60%
+    transparent 40%
+  ),
+  radial-gradient(
+    circle at 80% 70%,
+    rgba(229, 57, 53, 0.1),
+    transparent 40%
   );
-  pointer-events: none;
+
+  z-index: -1;
+}
+
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  opacity: 0.2;
+
   z-index: -1;
 }
 
 
 
+section {
+  background: rgba(15, 17, 21, 0.6);
+  border: 1px solid #2b313a;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
 
 
 
