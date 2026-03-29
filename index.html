@@ -12,10 +12,15 @@
 <div id="loader">
   <div class="loader-content">
 
-    <div class="crosshair"></div>
+    <img src="images/logo.png" class="loader-logo" alt="logo">
 
-    <h2>OlivElephant</h2>
-    <p class="loader-text">INITIALIZING SYSTEM...</p>
+    <p class="loader-text">INITIALIZING RANGE...</p>
+
+    <div class="animation-area">
+      <div class="gun">🔫</div>
+      <div class="bullet"></div>
+      <div class="target">🎯</div>
+    </div>
 
     <div class="loader-bar">
       <div class="loader-progress"></div>
@@ -137,13 +142,14 @@
   }
 </script>
 
-  <script>
+ <script>
   window.addEventListener("load", function () {
     const loader = document.getElementById("loader");
 
     setTimeout(() => {
-      loader.classList.add("hidden");
-    }, 1000); // trajanje loadinga (možeš promijeniti)
+      loader.style.opacity = "0";
+      loader.style.visibility = "hidden";
+    }, 2000);
   });
 </script>
 
