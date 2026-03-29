@@ -1019,7 +1019,7 @@ section:hover {
   }
 
   .hero {
-    background: url('images/hero.jpg') center/cover;
+    background: url('videos/hero-video.mp4') center/cover;
   }
 }
 
@@ -1162,3 +1162,25 @@ section:hover {
 
 
 
+
+h2 {
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 3px;
+  background: #e53935;
+  margin-top: 6px;
+}
+
+
+
+.pricing-card,
+.oprema-card {
+  backdrop-filter: blur(10px);
+  background: rgba(20, 24, 30, 0.7);
+}
