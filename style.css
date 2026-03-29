@@ -1230,3 +1230,66 @@ section:hover {
     transform: translateY(0);
   }
 }
+
+
+
+
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 50px 0;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat h2 {
+  font-size: 40px;
+  color: #e53935;
+}
+
+.stat p {
+  color: #c7ccd2;
+}
+
+
+
+.split {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 60px 0;
+  flex-wrap: wrap;
+}
+
+.split-text {
+  flex: 1;
+}
+
+.split-image {
+  flex: 1;
+  height: 300px;
+  background: url('images/hero.jpg') center/cover;
+  border-radius: 12px;
+}
+
+/* mobilni */
+@media (max-width: 768px) {
+  .split {
+    flex-direction: column;
+  }
+}
+
+
+
+.hero-content h2 {
+  letter-spacing: 2px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent, black 90%);
+}
