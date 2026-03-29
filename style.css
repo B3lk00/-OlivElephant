@@ -942,3 +942,39 @@ section:hover {
   font-size: 13px;
   color: #c7ccd2;
 }
+
+
+
+
+.oprema-card {
+  background: #11151b;
+  border: 1px solid #2b313a;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.oprema-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.oprema-card h3 {
+  margin: 12px 0 6px;
+  color: #e53935;
+  font-size: 16px;
+}
+
+.oprema-card p {
+  font-size: 14px;
+  padding: 0 12px 18px;
+}
+
+
+@media (max-width: 768px) {
+  .oprema-card img {
+    height: 180px;
+  }
+}
